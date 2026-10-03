@@ -64,7 +64,7 @@ class AkiliAgent < Formula
   end
 
   service do
-    run [opt_bin/"akili-agent", "run", "--state-dir", var/"akili-agent"]
+    run [opt_bin/"akili-agent", "start", "--state-dir", var/"akili-agent"]
     keep_alive true
     log_path var/"log/akili-agent.log"
     error_log_path var/"log/akili-agent.log"
