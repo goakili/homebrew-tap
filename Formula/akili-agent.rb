@@ -11,7 +11,7 @@ class AkiliAgent < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/goakili/akili/releases/download/v0.1.0/akili-agent_0.1.0_darwin_amd64.tar.gz"
-      sha256 "a1586b5030ceabe6f585b36d41029d7197376ae85c0b844cbce1d3bf3e8e7d47"
+      sha256 "a066ee80bfa3027eccce0b018909f2b9afda3effdcd5070cc0d701698dbac174"
 
       define_method(:install) do
         bin.install "akili-agent"
@@ -19,7 +19,7 @@ class AkiliAgent < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/goakili/akili/releases/download/v0.1.0/akili-agent_0.1.0_darwin_arm64.tar.gz"
-      sha256 "eef964b873fc8c95dfaf66876426b6b01e7ff59c8b991c59643657cfce410a94"
+      sha256 "9c4d936621d8705c79472a48a5da9073befa8c668a4b0b71f2dd30606a99f58c"
 
       define_method(:install) do
         bin.install "akili-agent"
@@ -30,14 +30,14 @@ class AkiliAgent < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/goakili/akili/releases/download/v0.1.0/akili-agent_0.1.0_linux_amd64.tar.gz"
-      sha256 "a49a5bd44e53a95f9048dee6705ac0fa242191dced83ba07a262cfa113aa1a13"
+      sha256 "32e6009660b70caeac45bbc214bc4ce2229ee62f7b58007b3ad856ba9387dfba"
       define_method(:install) do
         bin.install "akili-agent"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/goakili/akili/releases/download/v0.1.0/akili-agent_0.1.0_linux_arm64.tar.gz"
-      sha256 "9808e0a14a2a0e11f675969e68b1d2b8193a42b54a4c335e2f021cc3e64f8717"
+      sha256 "3aca0cf28e8b16641e909bb6378753278ad71e452759ca5b20fefd0f9eb9bc5c"
       define_method(:install) do
         bin.install "akili-agent"
       end
