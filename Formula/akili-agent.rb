@@ -5,21 +5,21 @@
 class AkiliAgent < Formula
   desc "Agent for Akili, the security-first control plane for autonomous AI operator agents"
   homepage "https://goakili.dev"
-  version "0.4.0"
-  license "AGPL-3.0-or-later"
+  version "0.5.0"
+  license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/goakili/akili/releases/download/v0.4.0/akili-agent_0.4.0_darwin_amd64.tar.gz"
-      sha256 "ea354fad491aeae09cff7c358685b65c0eda49108a4c3583daf6c768bf2a1ee6"
+      url "https://github.com/goakili/akili/releases/download/v0.5.0/akili-agent_0.5.0_darwin_amd64.tar.gz"
+      sha256 "ada7376d994dd1d03d453e1c915fc68ddc03cc57b7f16ffcd467b88cfb1550c0"
 
       define_method(:install) do
         bin.install "akili-agent"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/goakili/akili/releases/download/v0.4.0/akili-agent_0.4.0_darwin_arm64.tar.gz"
-      sha256 "def7d79f34c327d9c5cbb1cff942d11df9065403c85486f006ff951e880fc048"
+      url "https://github.com/goakili/akili/releases/download/v0.5.0/akili-agent_0.5.0_darwin_arm64.tar.gz"
+      sha256 "b19968afa62094a8e892cea3cd2fec7182a62b325c09e4618ce2985da7d8672b"
 
       define_method(:install) do
         bin.install "akili-agent"
@@ -29,15 +29,15 @@ class AkiliAgent < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goakili/akili/releases/download/v0.4.0/akili-agent_0.4.0_linux_amd64.tar.gz"
-      sha256 "73c947bf332831045390367dac63f9f09cd39d8728e75e2f517da12dfd1787bc"
+      url "https://github.com/goakili/akili/releases/download/v0.5.0/akili-agent_0.5.0_linux_amd64.tar.gz"
+      sha256 "e53d87d2486a5fef2f002ad6c917cd25370fe9cd043d9f5ac75d13f7c7dc9bab"
       define_method(:install) do
         bin.install "akili-agent"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goakili/akili/releases/download/v0.4.0/akili-agent_0.4.0_linux_arm64.tar.gz"
-      sha256 "3b41ab0e23d9e5591a5b4ff8affb7d00726e9af313e2c16163e5581996d17632"
+      url "https://github.com/goakili/akili/releases/download/v0.5.0/akili-agent_0.5.0_linux_arm64.tar.gz"
+      sha256 "98dad56c512ffd82479ca3b79e9251703500152fbb71170c5750a7d3c8ff7f41"
       define_method(:install) do
         bin.install "akili-agent"
       end
